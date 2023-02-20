@@ -9,11 +9,11 @@ st.title('Word by Word Plagiarism Detection')
 # provide an input box
 input1 = st.text_input('Input sentence 1')
 
-st.markdown(input1)
+# st.markdown(input1)
 
 input2 = st.text_input('Input sentence 2')
 
-st.markdown(input2)
+# st.markdown(input2)
 
 input1 = input1.split()
 input2 = input2.split()
@@ -28,7 +28,7 @@ def ngram_overlap(sentence1, sentence2, n):
 
 n = 3
 overlap = ngram_overlap(input1, input2, n)
-print("N-gram overlap (n={}): {}".format(n, overlap))
+# print("N-gram overlap (n={}): {}".format(n, overlap))
 
 # attach html background color to the overlaps
 
