@@ -2,6 +2,10 @@
 
 This is a Python script that allows users to detect **word by word** plagiarism between two input sentences.
 
+## Example
+
+![](https://cdn.mathpix.com/snip/images/PsCoHDZh1aDbDWGvMzTvym8xJn21MQIpvQEF7Vwwdh0.original.fullsize.png)
+
 ## Requirements
 
 To run this script, you will need to have Python 3 and the following Python packages installed:
