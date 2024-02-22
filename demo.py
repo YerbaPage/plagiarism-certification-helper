@@ -44,7 +44,7 @@ def highlight_overlap(sentence1, sentence2, overlap):
         if ' '.join(sentence1[i:i+n]) in overlap:
             s1_highlighted.append('<span style="background-color: #FFFF00">{}</span>'.format(word))
             sentence1_flag = n
-        elif sentence1_flag > 0:
+        elif sentence1_flag > 1:
             s1_highlighted.append('<span style="background-color: #FFFF00">{}</span>'.format(word))
             sentence1_flag -= 1
         else:
@@ -55,7 +55,7 @@ def highlight_overlap(sentence1, sentence2, overlap):
         if ' '.join(sentence2[i:i+n]) in overlap:
             s2_highlighted.append('<span style="background-color: #FFFF00">{}</span>'.format(word))
             sentence2_flag = n
-        elif sentence2_flag > 0:
+        elif sentence2_flag > 1:
             s2_highlighted.append('<span style="background-color: #FFFF00">{}</span>'.format(word))
             sentence2_flag -= 1
         else:
