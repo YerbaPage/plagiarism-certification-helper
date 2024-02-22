@@ -4,7 +4,7 @@ This is a Python script that allows users to detect **word by word** plagiarism 
 
 ## Example
 
-![](https://cdn.mathpix.com/snip/images/PsCoHDZh1aDbDWGvMzTvym8xJn21MQIpvQEF7Vwwdh0.original.fullsize.png)
+![](https://raw.githubusercontent.com/YerbaSite/images/main/202402221306705.png)
 
 ## Requirements
 

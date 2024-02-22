@@ -36,16 +36,32 @@ overlap = ngram_overlap(input1, input2, n)
 def highlight_overlap(sentence1, sentence2, overlap):
     s1_highlighted = []
     s2_highlighted = []
+    
+    sentence1_flag = 0
+    sentence2_flag = 0
+
     for i, word in enumerate(sentence1):
         if ' '.join(sentence1[i:i+n]) in overlap:
             s1_highlighted.append('<span style="background-color: #FFFF00">{}</span>'.format(word))
+            sentence1_flag = n
+        elif sentence1_flag > 0:
+            s1_highlighted.append('<span style="background-color: #FFFF00">{}</span>'.format(word))
+            sentence1_flag -= 1
         else:
             s1_highlighted.append(word)
+            sentence1_flag -= 1
+            
     for i, word in enumerate(sentence2):
         if ' '.join(sentence2[i:i+n]) in overlap:
             s2_highlighted.append('<span style="background-color: #FFFF00">{}</span>'.format(word))
+            sentence2_flag = n
+        elif sentence2_flag > 0:
+            s2_highlighted.append('<span style="background-color: #FFFF00">{}</span>'.format(word))
+            sentence2_flag -= 1
         else:
             s2_highlighted.append(word)
+            sentence2_flag -= 1
+
     s1_highlighted = ' '.join(s1_highlighted)
     s2_highlighted = ' '.join(s2_highlighted)
     return s1_highlighted, s2_highlighted
